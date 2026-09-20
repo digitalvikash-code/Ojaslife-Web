@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | OjasLife</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                OjasLife
+            </a>
+
+            <nav class="navbar">
+
+                <a href="index.html">Home</a>
+
+                <a href="projects.html" class="active">
+                    Projects
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+
+        <div class="container">
+
+            <h1>Our Projects</h1>
+
+            <p>
+                Explore residential plot projects by OjasLife.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH -->
+    <section class="project-search">
+
+        <div class="container">
+
+            <input
+                type="text"
+                id="projectSearch"
+                placeholder="Search projects..."
+            >
+
+            <select id="projectLocation">
+
+                <option value="all">
+                    All Locations
+                </option>
+
+                <option value="lalitpur">
+                    Lalitpur
+                </option>
+
+                <option value="jhansi">
+                    Jhansi
+                </option>
+
+                <option value="lucknow">
+                    Lucknow
+                </option>
+
+            </select>
+
+
+            <select id="projectStatus">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="available">
+                    Available
+                </option>
+
+                <option value="coming-soon">
+                    Coming Soon
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section class="projects-list section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    Our Projects
+                </h2>
+
+                <p id="projectCount">
+                    0 Projects
+                </p>
+
+            </div>
+
+
+            <div
+                class="all-project-grid"
+                id="projectGrid"
+            >
+            </div>
+
+
+            <div
+                id="noProjects"
+                style="display: none;"
+            >
+                <p>
+                    No projects found.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 OjasLife. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../Javascript/main.js"></script>
+    <script src="../Javascript/projects.js"></script>
+
+</body>
+
+</html>

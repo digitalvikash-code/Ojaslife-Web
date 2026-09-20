@@ -1,0 +1,178 @@
+/* ==========================================
+   OJASLIFE ADMIN
+   ========================================== */
+
+.admin-page {
+    padding: 60px 0;
+    min-height: 80vh;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.admin-stats {
+    margin-bottom: 30px;
+}
+
+.admin-stat-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    max-width: 280px;
+}
+
+.admin-stat-card h3 {
+    margin-bottom: 10px;
+}
+
+.admin-stat-card p {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.enquiries-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#enquiriesTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1100px;
+}
+
+#enquiriesTable th,
+#enquiriesTable td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+    vertical-align: top;
+}
+
+#enquiriesTable th {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+#enquiriesTable td {
+    line-height: 1.5;
+}
+
+#enquiriesTable tbody tr:hover {
+    background: #f8f8f8;
+}
+
+#enquiriesTable td:nth-child(9) {
+    min-width: 220px;
+    max-width: 300px;
+    white-space: normal;
+}
+
+.no-enquiries {
+    display: none;
+    text-align: center;
+    padding: 30px;
+}
+
+#errorMessage {
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   ADMIN LOGIN
+   ========================================== */
+
+.admin-login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.admin-login-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+.admin-login-card .logo {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.admin-login-card h1 {
+    margin-bottom: 10px;
+}
+
+.admin-login-card form {
+    margin-top: 25px;
+}
+
+.admin-login-card .btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ==========================================
+   PROJECT AVAILABILITY TABLE
+   ========================================== */
+
+.projects-management {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.admin-section-header {
+    margin-bottom: 25px;
+}
+
+#projectsTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+#projectsTable th,
+#projectsTable td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#projectsTable th {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+#projectsTable tbody tr:hover {
+    background: #f8f8f8;
+}
+
+.no-projects {
+    display: none;
+    text-align: center;
+    padding: 25px;
+}

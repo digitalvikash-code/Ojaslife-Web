@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Portal | OjasLife</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../frontend/index.html" class="logo">
+                Ojas<span>Life</span>
+            </a>
+
+            <h2>Admin Portal</h2>
+        </div>
+    </header>
+
+    <main class="admin-page">
+
+        <div class="container">
+
+            <div class="admin-header">
+                <div>
+                    <p class="section-label">OJASLIFE ADMIN</p>
+                    <section class="project-management">
+
+                        <div class="admin-section-header">
+                            <div>
+                                <p class="section-label">PROJECT MANAGEMENT</p>
+                                <h2>Add New Project</h2>
+                                <p>Add project location and plot availability.</p>
+                            </div>
+                        </div>
+
+                        <form id="projectForm" class="project-form">
+
+                            <div class="form-group">
+                                <label for="projectName">Project Name *</label>
+                                <input type="text" id="projectName" placeholder="e.g. Ojas Green Valley" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectLocation">Location *</label>
+                                <input type="text" id="projectLocation" placeholder="e.g. Lalitpur, Uttar Pradesh"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="totalPlots">Total Plots *</label>
+                                <input type="number" id="totalPlots" min="0" placeholder="e.g. 120" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="availablePlots">Available Plots *</label>
+                                <input type="number" id="availablePlots" min="0" placeholder="e.g. 87" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Add Project
+                            </button>
+
+                            <p id="projectMessage" class="form-message"></p>
+
+                        </form>
+
+                        <section class="projects-management">
+
+                            <div class="admin-section-header">
+                                <div>
+                                    <p class="section-label">PROJECTS</p>
+                                    <h2>Project Availability</h2>
+                                    <p>View all projects and available plots.</p>
+                                </div>
+                            </div>
+
+                            <div class="table-wrapper">
+
+                                <table id="projectsTable">
+
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Project</th>
+                                            <th>Location</th>
+                                            <th>Total Plots</th>
+                                            <th>Available Plots</th>
+                                            <th>Created</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="projectsBody">
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                            <p id="noProjects" class="no-projects">
+                                No projects found.
+                            </p>
+
+                        </section>
+                        <!-- ================= PLOT MANAGEMENT ================= -->
+
+                        <section class="admin-section">
+
+                            <h2>Manage Plots</h2>
+
+                            <form id="plotForm">
+
+                                <div class="form-group">
+
+                                    <label for="plotProject">
+                                        Project
+                                    </label>
+
+                                    <select id="plotProject" required>
+                                        <option value="">
+                                            Select Project
+                                        </option>
+                                    </select>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="plotNumber">
+                                        Plot Number
+                                    </label>
+
+                                    <input type="text" id="plotNumber" placeholder="e.g. 101" required>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="plotSize">
+                                        Plot Size
+                                    </label>
+
+                                    <input type="text" id="plotSize" placeholder="e.g. 800 Sq.Ft." required>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="plotFacing">
+                                        Facing
+                                    </label>
+
+                                    <select id="plotFacing">
+
+                                        <option value="">
+                                            Select Facing
+                                        </option>
+
+                                        <option value="East">
+                                            East
+                                        </option>
+
+                                        <option value="West">
+                                            West
+                                        </option>
+
+                                        <option value="North">
+                                            North
+                                        </option>
+
+                                        <option value="South">
+                                            South
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="plotStatus">
+                                        Status
+                                    </label>
+
+                                    <select id="plotStatus">
+
+                                        <option value="available">
+                                            Available
+                                        </option>
+
+                                        <option value="reserved">
+                                            Reserved
+                                        </option>
+
+                                        <option value="sold">
+                                            Sold
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <button type="submit">
+                                    Add Plot
+                                </button>
+
+                                <p id="plotMessage"></p>
+
+                            </form>
+
+                        </section>
+                    </section>
+                    <h1>Customer Enquiries</h1>
+                    <p>View property enquiries submitted by customers.</p>
+                </div>
+
+                <button id="refreshBtn" class="btn btn-primary">
+                    Refresh
+                </button>
+
+                <button id="logoutBtn" class="btn btn-secondary">
+                    Logout
+                </button>
+            </div>
+
+            <div class="admin-stats">
+                <div class="admin-stat-card">
+                    <h3>Total Enquiries</h3>
+                    <p id="totalEnquiries">0</p>
+                </div>
+            </div>
+
+            <div class="enquiries-card">
+
+                <div id="loadingMessage">
+                    Loading enquiries...
+                </div>
+
+                <div id="errorMessage"></div>
+
+                <div class="table-wrapper">
+
+                    <table id="enquiriesTable">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Location</th>
+                                <th>Project</th>
+                                <th>Plot Size</th>
+                                <th>Budget</th>
+                                <th>Timeline</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="enquiriesBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p id="noEnquiries" class="no-enquiries">
+                    No enquiries found.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="../Javascript/admin.js"></script>
+
+</body>
+<script>
+    const isAdminLoggedIn =
+        sessionStorage.getItem("ojaslifeAdmin");
+
+    if (isAdminLoggedIn !== "true") {
+        window.location.href = "login.html";
+    }
+</script>
+
+</html>

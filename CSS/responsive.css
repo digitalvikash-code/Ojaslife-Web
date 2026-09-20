@@ -1,0 +1,328 @@
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        gap: 18px;
+        margin-right: 20px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero {
+        padding-top: 130px;
+        padding-bottom: 70px;
+    }
+
+    .hero-form-card {
+        max-width: 600px;
+    }
+
+    .about-grid {
+        gap: 50px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+
+    /* Header */
+
+    .header {
+        padding: 18px 0;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 75px;
+        left: 4%;
+        width: 92%;
+
+        display: none;
+        flex-direction: column;
+        gap: 0;
+
+        background: var(--dark);
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 13px 20px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+        padding: 120px 0 60px;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+        letter-spacing: -1px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-form-card {
+        padding: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
+    /* Stats */
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .stat-item:nth-child(2) {
+        border-right: 0;
+    }
+
+
+    /* About */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image,
+    .image-placeholder {
+        min-height: 350px;
+        height: 350px;
+    }
+
+
+    /* Projects */
+
+    .section-heading {
+        display: block;
+    }
+
+    .view-all {
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Features */
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CTA */
+
+    .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+        border-right: 0;
+    }
+}
+
+/* ==========================================
+   PROJECT DETAILS RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .detail-two-column {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .detail-enquiry-card {
+        position: static;
+    }
+
+    .plot-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .project-detail-hero {
+        min-height: 470px;
+        padding-bottom: 50px;
+    }
+
+    .project-detail-hero h1 {
+        font-size: 48px;
+    }
+
+    .quick-info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quick-info-item {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .quick-info-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .quick-info-item:nth-child(3),
+    .quick-info-item:nth-child(4) {
+        border-bottom: 0;
+    }
+
+    .detail-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .plot-legend {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .plot-filters {
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .plot-filter {
+        white-space: nowrap;
+    }
+
+    .plot-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .map-placeholder {
+        min-height: 300px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .quick-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-info-item,
+    .quick-info-item:first-child {
+        padding: 20px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .quick-info-item:last-child {
+        border-bottom: 0;
+    }
+
+    .plot-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
